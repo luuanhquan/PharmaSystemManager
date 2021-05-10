@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="226" pageHeight="566" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="030c43c2-832b-4432-932a-b40c8e5c1a2b">
+	<property name="ireport.zoom" value="2.593742460100003"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<parameter name="Address" class="java.lang.String"/>
+	<parameter name="InvoiceID" class="java.lang.String"/>
+	<parameter name="PurchaseDate" class="java.lang.String"/>
+	<parameter name="EmployeeID" class="java.lang.String"/>
+	<parameter name="Discount" class="java.lang.String"/>
+	<parameter name="TotalAmount" class="java.lang.String"/>
+	<parameter name="SupplierID" class="java.lang.String"/>
+	<parameter name="SupplierName" class="java.lang.String"/>
+	<field name="Drug name" class="java.lang.String"/>
+	<field name="DrugID" class="java.lang.String"/>
+	<field name="Price" class="java.lang.String"/>
+	<field name="Quantity" class="java.lang.String"/>
+	<field name="Amount" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<image>
+				<reportElement x="18" y="5" width="39" height="30" uuid="32d7ab20-4857-451a-a813-c5abbf1ce8d4"/>
+				<imageExpression><![CDATA["src/icon/logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="5" y="37" width="67" height="17" forecolor="#009900" uuid="4c60b134-154d-4950-aa9a-1ea4262e93fe"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pharma4U]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="86" y="0" width="100" height="54" uuid="08726e81-3ffd-437f-b9ef-4300eddbc35a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Address}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="37" y="0" width="113" height="24" uuid="1132e40d-e5db-43e0-99b1-b4425455d9a2"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PURCHASE INVOICE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="24" width="37" height="12" uuid="509510bf-23a2-41e1-9565-c0cd1f3bdc67"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Inoivce ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="24" width="57" height="12" uuid="9f5056ed-4ccd-44cc-9abb-460edc38d937"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Purchase date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="38" width="46" height="12" uuid="84c9c6dd-6aed-4225-9a9a-06a639108bf2"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employee ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="41" y="24" width="72" height="12" uuid="46adfc18-9417-47d5-a248-c37740f91674"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{InvoiceID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="35" width="73" height="18" uuid="5e40b500-bcb9-4b77-b984-69e64a287021"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PurchaseDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="48" y="38" width="40" height="12" uuid="91a0aac4-f680-4c27-8886-48a14d47ce49"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{EmployeeID}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="53" width="186" height="1" uuid="3606ba9e-6081-4b82-8edb-d517302ebc31"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="19" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="4" width="44" height="14" uuid="30f7a695-01f6-4937-8784-826c3de786c1"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Drug name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="103" y="4" width="35" height="14" uuid="a4bb091c-7d81-47fd-a4bc-b5d48820e984"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="151" y="4" width="32" height="14" uuid="57c510b6-9ce8-40b8-bd3d-a9b43a9b78fa"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="4" width="30" height="14" uuid="020957f7-cb95-4561-9bba-141c19b71073"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="0" width="185" height="11" uuid="7e4d3b1c-ee96-43f4-97a3-991d11f07bbc"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Drug name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="1" y="12" width="22" height="9" uuid="fca8c8b9-0f3d-4dd1-acf3-f5f736aba052"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DrugID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="104" y="12" width="29" height="10" uuid="69c935dd-fbb1-4bf2-9b3e-89a281660ff0"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="12" width="38" height="10" uuid="94e84189-7461-4d42-bd7a-d6b7f259bb05"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="58" y="12" width="31" height="9" uuid="14106cd5-14b6-4ef6-a633-23981dae7688"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="6" width="56" height="11" uuid="41dd886d-4f6e-46a3-ade2-19190f11b131"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total amount]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="98" y="6" width="87" height="11" uuid="6ae74821-cfbe-4021-8877-b8dddc61da55"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TotalAmount}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="1" width="186" height="1" uuid="80118599-7f5f-47e9-b5ea-b8388b30836f"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="20" width="45" height="13" uuid="e0268c9e-0514-4d85-8d75-57861b328d3a"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Suppiler ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="85" y="20" width="100" height="13" uuid="e80479f0-68bf-4cc0-b3aa-d46052060c20"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SupplierID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+</jasperReport>
